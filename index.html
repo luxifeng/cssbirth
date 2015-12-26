@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- 修改说明 -->
+<!-- 1. 修改16宫格：-->
+<!-- ①修改16宫格的左右位置：每个注释“修改1”的地方都要修改-->
+<!--   a. 修改<div>中的style的left变量。注意屏幕中央的位置为0px，方块在左边，则一般为负，方块在右边，则一般为正-->
+<!--   b. 修改<div>中的style的left变量，16宫格一共有4列，假如第1列left值X1 = N，则第i列left值为Xi = N + 95 * (i-1)-->
+<!--      本例中X1 = -475, X2 = -380, X3 = -285, X4 = -190 -->
+<!-- ②修改16宫格的高度：注释“修改2” 的地方 -->
+<!-- 2. 修改字块：-->
+<!-- ①修改字块的高度：注释“修改3” 的地方要修改-->
+<!-- ②修改字块的左右位置：见文件./css/style.css，注释“修改4” 的地方-->
+<!-- ③修改字块的宽度：见文件./css/style.css，注释“修改5” 的地方-->
+<!-- ④修改字块的文字、打字速度：注释“修改6”的地方-->
+<html>
+    <head>
+        <title>Happy Birthday to Chen Sisi !!!!!!</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Little Boxes Menu or Navigation with jQuery - radnomly animate the menu items to show content, accodion like boxes menu" />
+        <meta name="keywords" content="jquery, boxes, menu, navigation, animate"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+        <!--<link href="css/main.css" rel="stylesheet"/>-->
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                background:#E4FFCF url(wood.jpg) no-repeat top center;
+                font-family:Futura, "Century Gothic", AppleGothic, sans-serif;
+                overflow:hidden;
+            }
+            h1{
+                color:#fff;
+                margin:40px 0px 20px 40px;
+                text-shadow:1px 1px 1px #555;
+                font-weight:normal;
+            }
+            div.back{
+            	text-transform:uppercase;
+            	text-shadow:1px 1px 1px #fff;
+                color:#666;
+                text-decoration:none;
+                font-size:16px;
+                position:absolute;
+                bottom:5px;
+                right:5px;
+            }
+            .reference{
+                position:absolute;
+                bottom:5px;
+                left:5px;
+            }
+            .reference p a, a.back{
+                text-transform:uppercase;
+                text-shadow:1px 1px 1px #fff;
+                color:#666;
+                text-decoration:none;
+                font-size:16px;
+            }
+            .reference p a:hover, a.back:hover{
+                color:#000;
+            }
+            
+            /* code for animated blinking cursor */
+		    #typed-cursor{
+                color:#fff;
+			    opacity: 1;
+			    font-weight: 100;
+			    -webkit-animation: blink 0.7s infinite;
+			    -moz-animation: blink 0.7s infinite;
+			    -ms-animation: blink 0.7s infinite;
+			    -o-animation: blink 0.7s infinite;
+			    animation: blink 0.7s infinite;
+		    }
+		    @-keyframes blink{
+			    0% { opacity:1; }
+			    50% { opacity:0; }
+			    100% { opacity:1; }
+		    }
+		    @-webkit-keyframes blink{
+			    0% { opacity:1; }
+			    50% { opacity:0; }
+			    100% { opacity:1; }
+		    }
+		    @-moz-keyframes blink{
+			    0% { opacity:1; }
+			    50% { opacity:0; }
+			    100% { opacity:1; }
+		    }
+		    @-ms-keyframes blink{
+			    0% { opacity:1; }
+			    50% { opacity:0; }
+			    100% { opacity:1; }
+		    }
+		    @-o-keyframes blink{
+			    0% { opacity:1; }
+			    50% { opacity:0; }
+			    100% { opacity:1; }
+		    }
+        </style>
+    </head>
+    <body>
+        <div class="title">
+            <h1>Happy Birthday to Chen Sisi !!!!!!</h1>
+        </div>
+        <div id="content">
+            <div class="wordsToYou" style="top:140px;"> <!-- 修改3：字块高度top值 -->
+			    <span id="typed"></span>
+            </div>
+
+            <div class="back">&copy <a class="back" href="mailto:zevon2046@163.com">Wu Shusheng</a> 2015 With Help Of <a class="back" href="http://tympanus.net/codrops/2010/05/18/little-boxes-menu-with-jquery">Feng Luxi</a></div>
+            <div id="littleBoxes" class="littleBoxes" style="top:50px;"> <!-- 修改2：16宫格高度top值 -->
+                <!-- row 1 -->
+				<div class="boxlink bg1" style="top:0px;left:-475px;"><!-- 修改1 -->
+                    <a href="">一句</a>
+                    <div class="boxcontent">
+                       <p>越过山丘，才知道是否有人等候！</p>
+                       <pre style="font-size:9px;">
+                                                ;o;         
+                                               ;$;
+                                              ;$$;
+                                             ;$$;
+                                            ;$$$ 
+                                           $$$$;
+                         o!!!             *$$$;  
+                        !!!$$$           **$$$;   
+                       ;!!$*$o          ***$$;    
+                       !** $$oo       o*****$;   
+          !!!!;       !;   $o**      oo*****;     
+              !!oooooo!    &****oooooooooo!!!!!!!!!!!!!oo
+                 ;oooooooo$&****ooooooo!!!!!!!!!!!! 
+                    ;!!o$$$$*****oooo!!!!!!!!;
+                        $$$&*****oo!!!!!
+                        $$$$*****o$$$$$
+                        $$$*****$$$$$$
+                        $$$****$$$$$$
+                        o$$**$$$$$$
+                         $ *$$o 
+                       </pre>
+					   <p>这是千！纸！鹤！</p>
+                    </div>
+                </div>
+                <div class="bg5" style="background-position:-90px 0;top:0px;left:-380px;"></div><!-- 修改1 -->
+                <div class="bg5" style="background-position:-180px 0;top:0px;left:-285px;"></div><!-- 修改1 -->
+                <div class="bg5" style="background-position:-270px 0;top:0px;left:-190px;"></div><!-- 修改1 -->
+
+				<!-- row 2 -->
+				<div class="bg5" style="background-position:0px -90px;top:95px;left:-475px;"></div><!-- 修改1 -->
+                <div class="boxlink bg2" style="top:95px;left:-380px;"><!-- 修改1 -->
+                    <a href="">一词</a>
+                    <div class="boxcontent">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日光鼎盛</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如你身载风流光影</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;狂热与孤寂重叠回忆</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在无处落脚的人海里</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;你的停靠成为岛屿</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成为陆地</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成为具体</p>
+						<br />
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;爱你锋利的伤痕</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;爱你成熟的天真</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;多谢你如此精彩耀眼</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;做我平淡岁月里星辰</p>
+                        <br />
+                        <p>
+                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </p>
+                    </div>
+                </div>
+                <div class="bg5" style="background-position:-180px -90px;top:95px;left:-285px;"></div><!-- 修改1 -->
+                <div class="bg5" style="background-position:-270px -90px;top:95px;left:-190px;"></div><!-- 修改1 -->
+
+				<!-- row 3 -->
+                <div class="bg5" style="background-position:0 -180px;top:190px;left:-475px;"></div><!-- 修改1 -->
+                <div class="bg5" style="background-position:-90px -180px;top:190px;left:-380px;"></div><!-- 修改1 -->
+                <div class="boxlink bg3" style="top:190px;left:-285px;"><!-- 修改1 -->
+                    <a href="">一话</a>
+                    <div class="boxcontent">
+                        <p><strong>思思:&nbsp;</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在这一生里，你会遇见很多风景，</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;会遇见很多和你一起看风景的人，</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;你会遇见很多次自己；</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我希望你不管在什么境遇和风景里，</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;都能得偿所愿，</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不需为思想所苦，不会为岁月所伤。</p>
+                    </div>
+                </div>
+                <div class="bg5" style="background-position:-270px -180px;top:190px;left:-190px;"></div><!-- 修改1 -->
+
+				<!-- row 4 -->
+                <div class="bg5" style="background-position:0 -270px;top:285px;left:-475px;"></div><!-- 修改1 -->
+                <div class="bg5" style="background-position:-90px -270px;top:285px;left:-380px;"></div><!-- 修改1 -->
+                <div class="bg5" style="background-position:-180px -270px;top:285px;left:-285px;"></div><!-- 修改1 -->
+                <div class="boxlink bg4" style="top:285px;left:-190px;"><!-- 修改1 -->
+                    <a href="">关于</a>
+                    <div class="boxcontent">
+                        <p>这是给亲爱的可爱的万众的唯一陈思思小朋友的23岁生日礼物~~</p>
+                        <br />
+                        <p>p.s.</p>
+                        <p>感谢HTML5技术呈现的华丽前端</p>
+                        <p>感谢我美丽渊博靠谱贴心的好友冯璐茜的工作</p>
+                        <p>感谢互联网开放、平等、协作、分享的精神</p>
+                        <br />
+                        <p>请使用支持HTML5的非手机浏览器浏览本页</p>
+                        <br />
+                        <p><small>最终解释权归吴先生所有</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	    <script type="text/javascript" src="js/typed.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                /* object to save the initial positions of each box */
+                var divinfo = {"initial": []};
+                /* index of the selected / clicked box */
+                var current = -1;
+
+				/* 修改6 */
+                $("#typed").typed({
+					// 文字
+                    strings: ["我们每个人生在世界上都是孤独的。每个人都被囚禁在一座铁塔里，只能靠一些符号同别人传达自己的思想；而这些符号并没有共同的价值，因此它们的意义是模糊的、不确定的。我们非常可怜地想把自己心中的财富传送给别人，但是他们却没有接受这些财富的能力。因此我们只能孤独地行走，尽管身体互相依傍却并不在一起，既不了解别的人也不能为别人所了解。我们好象住在异国的人。对于这个国家的语言懂得非常少，虽然我们有各种美妙的、深奥的事情要说，却只能局限于会话手册上那几句陈腐、平庸的话。我们的脑子里充满了各种思想，而我们能说的只不过是象“园丁的姑母有一把伞在屋子里”这类话。——毛姆《月亮和六个便士》 ..............................................................................................................这是一个十分重要的朋友送给我23岁的生日礼物，这段话一直感动着我，今天我在你23岁生日的时候把它送给你。即便人生而孤独，但是仍愿你懂得我的感激和祝福。"],
+                    // 打字速度：值越小越快
+					typeSpeed: 100,
+                    backDelay: 500,
+                    loop: false,
+                    // defaults to false for infinite loop
+                    loopCount: false,
+                    callback: function () { foo(); }
+                });
+
+                function foo() { console.log("Callback"); }
+
+                /* we save the index,top and left of each one of the boxes */
+                $('#littleBoxes > div').each(function(){
+                    var $this = $(this);
+                    var initial = {
+                                'index' : $this.index(),
+                                'top'     : $this.css('top'),
+                                'left'     : $this.css('left')
+                    };
+                    divinfo.initial.push(initial);
+                });
+
+                /* clcik event for the anchors inside of the boxes */
+                $('#littleBoxes a').bind('click',function(e){
+                        var $this         = $(this);
+                        var $currentBox    = $this.parent();
+                        /* set a z-index lower than all the other boxes,
+                        to see the other boxes animation on the top*/
+                        $currentBox.css('z-index','1');
+
+                        /* if we are clicking on a expanded box : */
+                        if(current == $currentBox.index()){
+                            /* put it back (decrease width,height, and set the top and left like it was before).
+                            the previous positions are saved in the divinfo obj*/
+                            $currentBox.stop().animate({
+                                    'top'         : divinfo.initial[$currentBox.index()].top,
+                                    'left'        : divinfo.initial[$currentBox.index()].left,
+                                    'width'     : '90px',
+                                    'height'    : '90px'
+                            },800,'easeOutBack').find('.boxcontent').fadeOut();
+
+
+                            $('#littleBoxes > div').not($currentBox).each(function(){
+                                var $ele         = $(this);
+                                var elemTop     = divinfo.initial[$ele.index()].top;
+                                var elemLeft     = divinfo.initial[$ele.index()].left;
+                                $ele.stop().show().animate({
+                                    'top'         : elemTop,
+                                    'left'        : elemLeft,
+                                    'opacity'    : 1
+                                },800);
+                            });
+                            current = -1;
+                        }
+                        /* if we are clicking on a small box : */
+                        else{
+                            /* randomly animate all the other boxes.
+                            Math.floor(Math.random()*601) - 150 gives a random number between -150 and 450.
+                            This range is considering the initial lefts/tops of the elements. It's not the exact right
+                            range, since we would have to calculate the range based on each one of the boxes. Anyway, it
+                            fits our needs...
+                            */
+                            $('#littleBoxes > div').not($currentBox).each(function(){
+                                var $ele = $(this);
+                                $ele.stop().animate({
+                                    'top' : (Math.floor(Math.random()*601) - 150) +'px',
+                                    'left': (Math.floor(Math.random()*601) - 650) +'px',/* 修改1：变形效果，参数设定看效果 */
+                                    'opacity':0
+                                },800,function(){
+                                    $(this).hide();
+                                });
+                            });
+
+                            /* expand the clicked one. Also, fadeIn the content (boxcontent)
+                            if you want it to fill the space of the littleBoxes container,
+                            then these are the right values */
+                            var newwidth     = 379;
+                            var newheight     = 379;
+                            $currentBox.stop().animate({
+                                'top'     : '0px',
+                                'left'    : '-475px',  /* 修改1：变形后的位置，为第1列宫格left值N */
+                                'width' : newwidth +'px',
+                                'height': newheight+'px'
+                            },800,'easeOutBack',function(){
+                                current = $currentBox.index();
+                                $(this).find('.boxcontent').fadeIn();
+                            });
+
+
+                        }
+                        e.preventDefault();
+                });
+            });
+        </script>
+        
+	    <script>
+	    $(function () {
+
+	        
+
+	    });
+	    </script>
+    </body>
+</html>
